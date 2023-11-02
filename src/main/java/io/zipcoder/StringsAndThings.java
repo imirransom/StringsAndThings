@@ -42,10 +42,16 @@ public class StringsAndThings {
      * containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input) {
-        boolean con = true;
-        if (input == "is" && input == "not") {
+        boolean trueFalse;
+        int count = 0;
+        String[] str = input.split(" ");
+        if (str.equals("is") && str.equals("not")) {
+            trueFalse = true;
 
-        }return con;
+        }else {
+            trueFalse = false;
+        }
+        return trueFalse;
     }
 
 
