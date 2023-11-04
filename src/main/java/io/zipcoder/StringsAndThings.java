@@ -49,19 +49,21 @@ public class StringsAndThings {
      * containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input) {
-        boolean trueFalse = true;
-        int count = 0;
-        String[] str = input.split("//s");
-        for (int i = 0; i < str.length; i++){
-            if (str.equals("is") && str.equals("not")) {
-                trueFalse = true;
+        boolean trueFalse;
+        int count1 = 0;
+        int count2 = 0;
+        //int finalIndex = input.length() - 1;
+        for (int i = 0; i < input.length(); i++) {
+            if (input.equals("is")) {
+                count1 += 1;
 
-            }else {
-                trueFalse = false;
+            } else if (input.equals("not")) {
+                count2 += 1;
             }
 
-        }return trueFalse;
 
+        }
+        return count1 == count2;
     }
 
 
@@ -75,6 +77,7 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
+        //charAt(i) == "g" && charAt(i) + 1
         return null;
     }
 
