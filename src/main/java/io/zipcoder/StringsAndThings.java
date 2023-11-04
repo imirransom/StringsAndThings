@@ -49,19 +49,15 @@ public class StringsAndThings {
      * containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input) {
-        boolean trueFalse;
         int count1 = 0;
         int count2 = 0;
         //int finalIndex = input.length() - 1;
         for (int i = 0; i < input.length(); i++) {
             if (input.equals("is")) {
                 count1 += 1;
-
             } else if (input.equals("not")) {
                 count2 += 1;
             }
-
-
         }
         return count1 == count2;
     }
@@ -77,10 +73,17 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
-        //charAt(i) == "g" && charAt(i) + 1
-        return null;
+        Boolean trueFalse = false;
+        for (int i = 0; i < input.length(); i++){
+            if (input.charAt(i) == 'g' && (input.charAt(i + 1) == 'g')){
+                trueFalse = true;
+            }
+            else if (input.charAt(i) == 'g' && (input.charAt(i + 1) != 'g')) {
+                trueFalse = false;
+            }
+        }
+        return trueFalse;
     }
-
 
     /**
      * We'll say that a "triple" in a string is a char appearing three times in a row.
@@ -90,6 +93,14 @@ public class StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple8(String input){
-        return null;
+        Integer count = 0;
+        for ( int i =0; i< input.length()-2 ; i++){
+            if(input.charAt(i) == input.charAt(i+1) && input.charAt(i+1) == input.charAt(i+2)){
+                count++;
+            }
+        }
+
+
+        return count;
     }
 }
