@@ -77,6 +77,7 @@ public class StringsAndThings {
         for (int i = 0; i < input.length(); i++){
             if (input.charAt(i) == 'g' && (input.charAt(i + 1) == 'g')){
                 trueFalse = true;
+                break;
             }
             else if (input.charAt(i) == 'g' && (input.charAt(i + 1) != 'g')) {
                 trueFalse = false;
