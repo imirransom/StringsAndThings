@@ -17,21 +17,21 @@ public class CountTripleTest {
     @Test
     public void countTripleTest1(){
         Integer expected = 1;
-        Integer actual = stringsAndThings.countTriple("abcXXXabc");
+        Integer actual = stringsAndThings.countTriple8("abcXXXabc");
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void countTripleTest2(){
         Integer expected = 3;
-        Integer actual = stringsAndThings.countTriple("xxxabyyyycd");
+        Integer actual = stringsAndThings.countTriple8("xxxabyyyycd");
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void countTripleTest3(){
         Integer expected = 0;
-        Integer actual = stringsAndThings.countTriple("a");
+        Integer actual = stringsAndThings.countTriple8("a");
         Assert.assertEquals(expected, actual);
     }
 

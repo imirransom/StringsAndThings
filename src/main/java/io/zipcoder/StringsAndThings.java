@@ -15,7 +15,10 @@ public class StringsAndThings {
      * countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input) {
-
+    String[] str = input.split("///");
+        for (int i = 0; i < str.length; i++){
+            //if str[0]
+        }
 
         return null;
     }
@@ -42,17 +45,21 @@ public class StringsAndThings {
      * containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input) {
-        boolean trueFalse;
+        boolean trueFalse = true;
         int count = 0;
-        String[] str = input.split(" ");
-        if (str.equals("is") && str.equals("not")) {
-            trueFalse = true;
+        String[] str = input.split("//s");
+        for (int i = 0; i < str.length; i++){
+            if (str.equals("is") && str.equals("not")) {
+                trueFalse = true;
 
-        }else {
-            trueFalse = false;
-        }
-        return trueFalse;
+            }else {
+                trueFalse = false;
+            }
+
+        }return trueFalse;
+
     }
+
 
 
 
@@ -75,7 +82,7 @@ public class StringsAndThings {
      *            countTriple("xxxabyyyycd") // Should return 3
      *            countTriple("a") // Should return 0
      */
-    public Integer countTriple(String input){
+    public Integer countTriple8(String input){
         return null;
     }
 }
